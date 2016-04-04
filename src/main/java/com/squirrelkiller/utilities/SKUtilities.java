@@ -21,12 +21,19 @@ public class SKUtilities {
     public void preInit(FMLPreInitializationEvent event)
     {
     	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+    	config.load();
+    	
+    	config.save();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	recipes.addRecipes();
+    	recipes.alternateBedRecipe();
+    	
+    	recipes.elytraRecipe();
+    	
+    	recipes.slimeRecipe();
     }
     
     @EventHandler
