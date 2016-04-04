@@ -1,5 +1,8 @@
 package com.squirrelkiller.utilities;
 
+import com.squirrelkiller.utilities.init.ModRecipes;
+import com.squirrelkiller.utilities.preInit.config;
+
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -29,11 +32,11 @@ public class SKUtilities {
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	recipes.alternateBedRecipe();
+    	ModRecipes.alternateBedRecipe();
     	
-    	recipes.elytraRecipe();
+    	ModRecipes.elytraRecipe();
     	
-    	recipes.slimeRecipe();
+    	ModRecipes.slimeRecipe();
     }
     
     @EventHandler
