@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "skutilities",
+  "name": "SK Utilities",
+  "description": "A utility mod created for my mod packs",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["squirrel_killer"],
+  "credits": "The Forge and FML guys.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
