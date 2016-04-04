@@ -1,36 +1,38 @@
 package com.squirrelkiller.utilities;
 
+//import com.squirrelkiller.utilities.init.ModItems;
 import com.squirrelkiller.utilities.init.ModRecipes;
+import com.squirrelkiller.utilities.proxy.CommonProxy;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = SKUtilities.MODID, version = SKUtilities.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class SKUtilities {
-    public static final String MODID = "SKUtilities";
-    public static final String MODNAME = "SK Utilties";
-    public static final String VERSION = "1.0";
+
+	//@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+	//public static CommonProxy proxy;
     
-    @Instance(value = SKUtilities.MODID)
+    @Instance(value = Reference.MOD_ID)
     public static SKUtilities instance;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-    	Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-    	config.load();
-    	
-    	config.save();
+    	//ModItems.init();
+    	//ModItems.registerModItem();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+    	//proxy.registerRenders();
     	ModRecipes.addRecipes();
     }
     
