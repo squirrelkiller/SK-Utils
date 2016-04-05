@@ -2,11 +2,9 @@ package com.squirrelkiller.utilities;
 
 //import com.squirrelkiller.utilities.init.ModItems;
 import com.squirrelkiller.utilities.init.ModRecipes;
-import com.squirrelkiller.utilities.proxy.CommonProxy;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -22,9 +20,27 @@ public class SKUtilities {
     @Instance(value = Reference.MOD_ID)
     public static SKUtilities instance;
     
+    public static boolean slimeRecipe;
+    public static boolean alternateBedRecipe;
+    public static boolean gravelToFlint;
+    public static boolean elytraRecipe;
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+    	
+    	
+        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+
+        config.load();
+     
+        slimeRecipe = config.get("Recipes", "slimeRecipe", true).getBoolean(slimeRecipe);
+        alternateBedRecipe = config.get("Recipes", "alternateBedRecipe", true).getBoolean(alternateBedRecipe);
+        gravelToFlint = config.get("Recipes", "gravelToFlint", true).getBoolean(gravelToFlint);
+        elytraRecipe = config.get("Recipes", "elytraRecipe", true).getBoolean(elytraRecipe);
+        
+        config.save();
+    	
     	//ModItems.init();
     	//ModItems.registerModItem();
     }

@@ -1,5 +1,8 @@
 package com.squirrelkiller.utilities.init;
 
+import com.squirrelkiller.utilities.SKUtilities;
+
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -26,12 +29,30 @@ public class ModRecipes {
 
 	}
 	
+	public static void gravelToFlint() {
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.flint),Blocks.gravel);
+		
+	}
+	
 	public static void addRecipes() {
 		
-		slimeRecipe();
-		alternateBedRecipe();
-		elytraRecipe();
+		if (SKUtilities.slimeRecipe) {
+			slimeRecipe();
+		}
 		
+		if (SKUtilities.alternateBedRecipe) {
+			alternateBedRecipe();
+		}
+		
+		if (SKUtilities.elytraRecipe) {
+			elytraRecipe();
+		}
+		
+		if (SKUtilities.gravelToFlint){
+			gravelToFlint();
+		}
+
 	}
 	
 }
