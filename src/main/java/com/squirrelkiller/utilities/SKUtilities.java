@@ -24,7 +24,7 @@ public class SKUtilities {
     public static boolean alternateBedRecipe;
     public static boolean gravelToFlint;
     public static boolean elytraRecipe;
-    
+    public static boolean burningWoodSwordRecipe;
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -38,6 +38,7 @@ public class SKUtilities {
         alternateBedRecipe = config.get("Recipes", "alternateBedRecipe", true).getBoolean(alternateBedRecipe);
         gravelToFlint = config.get("Recipes", "gravelToFlint", true).getBoolean(gravelToFlint);
         elytraRecipe = config.get("Recipes", "elytraRecipe", true).getBoolean(elytraRecipe);
+        burningWoodSwordRecipe = config.get("Recipes", "burningWoodSwordRecipe", true).getBoolean(burningWoodSwordRecipe);
         
         config.save();
     	

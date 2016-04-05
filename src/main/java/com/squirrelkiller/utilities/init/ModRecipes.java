@@ -2,7 +2,7 @@ package com.squirrelkiller.utilities.init;
 
 import com.squirrelkiller.utilities.SKUtilities;
 
-import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -35,6 +35,14 @@ public class ModRecipes {
 		
 	}
 	
+	public static void burningWoodSwordRecipe() {
+		
+		ItemStack burningSword = new ItemStack(Items.wooden_sword);
+		burningSword.addEnchantment(Enchantment.getEnchantmentByID(20), 1);
+		GameRegistry.addShapelessRecipe(burningSword, Items.wooden_sword, Blocks.torch);
+		
+	}
+	
 	public static void addRecipes() {
 		
 		if (SKUtilities.slimeRecipe) {
@@ -51,6 +59,10 @@ public class ModRecipes {
 		
 		if (SKUtilities.gravelToFlint){
 			gravelToFlint();
+		}
+		
+		if (SKUtilities.burningWoodSwordRecipe) {
+			burningWoodSwordRecipe();
 		}
 
 	}
