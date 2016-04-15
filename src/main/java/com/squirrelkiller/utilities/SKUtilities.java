@@ -25,41 +25,19 @@ public class SKUtilities {
     @Instance(value = Reference.MOD_ID)
     public static SKUtilities instance;
     
-    // Variables for controlling the configuration files.
-    
-    public static boolean slimeRecipe;
-    public static boolean alternateBedRecipe;
-    public static boolean gravelToFlint;
-    public static boolean elytraRecipe;
-    public static boolean burningWoodSwordRecipe;
-    public static boolean guideBook;
-    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
     	
-    	
-        Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-
-        config.load();
-     
-        slimeRecipe = config.get("Recipes", "slimeRecipe", true).getBoolean(slimeRecipe);
-        alternateBedRecipe = config.get("Recipes", "alternateBedRecipe", true).getBoolean(alternateBedRecipe);
-        gravelToFlint = config.get("Recipes", "gravelToFlint", true).getBoolean(gravelToFlint);
-        elytraRecipe = config.get("Recipes", "elytraRecipe", true).getBoolean(elytraRecipe);
-        burningWoodSwordRecipe = config.get("Recipes", "burningWoodSwordRecipe", true).getBoolean(burningWoodSwordRecipe);
-        guideBook = config.get("Other", "guideBook", true).getBoolean(guideBook);
-        
-        config.save();
-    	
-        ModItems.setupVariousItems();
+	    proxy.preInit(event);
         
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	proxy.RegisterRenders();
+    	//proxy.init(event);
+    	ModRecipes.addRecipes();
     }
     
     @EventHandler

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "SKUtilities:items/Cooked_Ant"
+        "layer0": "skutilities:items/Cooked_Ant"
     }
 }

@@ -3,12 +3,17 @@ package com.squirrelkiller.utilities.items;
 import com.squirrelkiller.utilities.Reference;
 import com.squirrelkiller.utilities.SKUtilities;
 import com.squirrelkiller.utilities.init.ModItems;
+import com.sun.webkit.ThemeClient;
 
-import akka.io.Tcp.Register;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemMeshDefinition;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItem extends Item{
  
@@ -22,16 +27,22 @@ public class ModItem extends Item{
        
         //Below is an example of how I handle things for specific items
         
-        if(name.equals("caveEnergyUpgrade")){
+        /*if(name.equals("caveEnergyUpgrade")){
             this.maxStackSize = 8;
-        }
+        }*/
+        
     }
  
-    public static void RegisterRender(Item item){
-    	String temp = item.getUnlocalizedName();
-		ModelResourceLocation location = new ModelResourceLocation(Reference.MOD_ID.toLowerCase() + ":" + temp, "inventory");
-
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, location);
+    @SideOnly(Side.CLIENT)
+    public void initModel() {
+      final ModelResourceLocation resource = new ModelResourceLocation(Reference.MOD_ID.toLowerCase() + ":"+getUnlocalizedName().substring(5), "inventory");
+      ModelBakery.registerItemVariants(this,resource);
+      ModelLoader.setCustomMeshDefinition(this, new ItemMeshDefinition() {
+           @Override
+           public ModelResourceLocation getModelLocation(ItemStack stack) {
+                 return resource;
+           }
+      });
     }
     
     //Override default methods below here if necessary

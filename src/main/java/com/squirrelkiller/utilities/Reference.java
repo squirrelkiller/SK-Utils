@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class Reference {
-    public static final String MOD_ID = "SKUtilities";
+    public static final String MOD_ID = "skutilities";
     public static final String MOD_NAME = "SK Utilties";
     public static final String VERSION = "1.0";
     public static final String CLIENT_PROXY_CLASS = "com.squirrelkiller.utilities.proxy.ClientProxy";

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "skutilities:items/Ant"
+        "layer0": "skutilities:items/Mod_Icon"
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "SKUtilities:items/Fishing_Rod_Reel"
+        "layer0": "skutilities:items/Fishing_Rod_Reel"
     }
 }

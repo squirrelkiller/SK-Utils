@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "SKUtilities:items/Fishing_Rod_Pole"
+        "layer0": "skutilities:items/Iron_Nugget"
     }
 }

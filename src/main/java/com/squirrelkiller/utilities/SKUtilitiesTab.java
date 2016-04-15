@@ -15,7 +15,7 @@ public class SKUtilitiesTab extends CreativeTabs{
 	@Override
 	public Item getTabIconItem() {
 		// TODO Auto-generated method stub
-		return ModItems.items.get("Fishing_Rod_Pole");
+		return ModItems.items.get("Mod_Icon");
 	}
 	
 	
