@@ -34,7 +34,7 @@ public class ModRecipes {
 		}
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.items.get("Fishing_Hook")), " I", "II", 'I', "nuggetIron"));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.items.get("Fishing_Rod_Reel")), "ingotIron", "stickWood", "string", "slimeball"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.items.get("Fishing_Rod_Reel")), "ingotIron", "stickWood", "string", "slimeball"));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.fishing_rod), ModItems.items.get("Fishing_Rod_Reel"), ModItems.items.get("Fishing_Hook"), "stickWood", "string"));
 		
 	}

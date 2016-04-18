@@ -2,13 +2,13 @@
 {
   "modid": "skutilities",
   "name": "SK Utilities",
-  "description": "A utility mod created for my mod packs",
+  "description": "A utility mod created for my modpacks",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["squirrel_killer"],
-  "credits": "The Forge and FML guys.",
+  "credits": "The Forge and FML guys for making mods like this possible. The MCP team for making things like Forge possible. Cobbs, who has been invaluable at helping me understand how to get some things to actually work.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

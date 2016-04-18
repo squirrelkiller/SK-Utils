@@ -34,8 +34,7 @@ public class SKUtilities {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		// proxy.init(event);
-		ModRecipes.addRecipes();
+		proxy.init(event);
 	}
 
 	@EventHandler
