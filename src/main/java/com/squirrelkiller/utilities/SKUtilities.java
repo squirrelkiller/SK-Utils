@@ -19,30 +19,27 @@ public class SKUtilities {
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	
+
 	public static final SKUtilitiesTab tabSKUtilities = new SKUtilitiesTab("tabSKUtilities");
-    
-    @Instance(value = Reference.MOD_ID)
-    public static SKUtilities instance;
-    
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-    	
-	    proxy.preInit(event);
-        
-    }
-    
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-    	//proxy.init(event);
-    	ModRecipes.addRecipes();
-    }
-    
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
-		
-    }
+
+	@Instance(value = Reference.MOD_ID)
+	public static SKUtilities instance;
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+
+		proxy.preInit(event);
+
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
+		// proxy.init(event);
+		ModRecipes.addRecipes();
+	}
+
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+
+	}
 }

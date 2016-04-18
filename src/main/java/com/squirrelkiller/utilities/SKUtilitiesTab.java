@@ -5,7 +5,7 @@ import com.squirrelkiller.utilities.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class SKUtilitiesTab extends CreativeTabs{
+public class SKUtilitiesTab extends CreativeTabs {
 
 	public SKUtilitiesTab(String label) {
 		super(label);
@@ -17,6 +17,5 @@ public class SKUtilitiesTab extends CreativeTabs{
 		// TODO Auto-generated method stub
 		return ModItems.items.get("Mod_Icon");
 	}
-	
-	
+
 }

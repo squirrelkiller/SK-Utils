@@ -13,12 +13,13 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class ModRecipes {
 	
 	public static void ironNuggetRecipe() {
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.items.get("Iron_Nugget"), 9), "ingotIron");
-		GameRegistry.addRecipe(new ItemStack(Items.iron_ingot), "III", "III", "III", 'I', "nuggetIron");
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.items.get("Iron_Nugget"), 9), "ingotIron"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.iron_ingot), "III", "III", "III", 'I', "nuggetIron"));
 	}
 	
 	public static void fishingRecipeReplacer() {
@@ -32,9 +33,9 @@ public class ModRecipes {
 				remover.remove();
 		}
 		
-		GameRegistry.addRecipe(new ItemStack(ModItems.items.get("Fishing_Hook")), " I", "II", 'I', "nuggetIron");
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.items.get("Fishing_Rod_Reel")), "ingotIron", "stickWood", "string", "slimeball");
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.fishing_rod), ModItems.items.get("Fishing_Rod_Reel"), ModItems.items.get("Fishing_Hook"), "stickWood", "string");
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.items.get("Fishing_Hook")), " I", "II", 'I', "nuggetIron"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.items.get("Fishing_Rod_Reel")), "ingotIron", "stickWood", "string", "slimeball"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.fishing_rod), ModItems.items.get("Fishing_Rod_Reel"), ModItems.items.get("Fishing_Hook"), "stickWood", "string"));
 		
 	}
 
@@ -47,18 +48,18 @@ public class ModRecipes {
 	}
 
 	public static void elytraRecipe(){
-		GameRegistry.addRecipe(new ItemStack(Items.elytra),"LTL","FCF","FEF",'F', "feather",'L', "leather",'T', Items.chorus_fruit,'C', Items.diamond_chestplate,'E', "blockEmerald");
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.elytra),"LTL","FCF","FEF",'F', "feather",'L', "leather",'T', Items.chorus_fruit,'C', Items.diamond_chestplate,'E', "blockEmerald"));
 
 	}
 	
 	public static void gravelToFlint(){
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.flint),"gravel");
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.flint),"gravel"));
 	}
 	
 	public static void burningWoodSwordRecipe(){
 		ItemStack burningSword = new ItemStack(Items.wooden_sword);
 		burningSword.addEnchantment(Enchantment.getEnchantmentByID(20), 1);
-		GameRegistry.addShapelessRecipe(burningSword, Items.wooden_sword, "torch");
+		GameRegistry.addRecipe(new ShapelessOreRecipe(burningSword, Items.wooden_sword, "torch"));
 	}
 	
 	public static void addRecipes() {
