@@ -15,9 +15,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class CommonProxy implements IProxy{
-	
-	private final Minecraft minecraft = Minecraft.getMinecraft();
-	
+		
 	@Override
 	public void preInit() {
 		
@@ -33,18 +31,5 @@ public class CommonProxy implements IProxy{
 	public void postInit() {
 
 	}
-
-	@Override
-	public void doClientRightClick() {
-		// Press the Use Item keybinding
-		KeyBinding.onTick(minecraft.gameSettings.keyBindUseItem.getKeyCode());
-	}
-
-	@Override
-	public EntityPlayer getClientPlayer() {
-		return minecraft.thePlayer;
-	}
-
-
 
 }

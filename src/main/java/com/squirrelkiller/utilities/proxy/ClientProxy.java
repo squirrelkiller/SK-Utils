@@ -27,14 +27,4 @@ public class ClientProxy implements IProxy {
 
 	}
 
-	@Override
-	public void doClientRightClick() {
-		// Press the Use Item keybinding
-		KeyBinding.onTick(minecraft.gameSettings.keyBindUseItem.getKeyCode());
-	}
-
-	@Override
-	public EntityPlayer getClientPlayer() {
-		return minecraft.thePlayer;
-	}
 }
