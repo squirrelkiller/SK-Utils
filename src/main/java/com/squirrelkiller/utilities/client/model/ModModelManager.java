@@ -23,12 +23,12 @@ public class ModModelManager {
 
 	public void registerAllModels() {
 		registerItemModels();
+		System.out.println("Models Registered");
 	}
 
 	private final Set<Item> itemsRegistered = new HashSet<Item>();
 
 	private void registerItemModels() {
-		
 		ModItems.items.stream().filter(item -> !itemsRegistered.contains(item)).forEach(this::registerItemModel);
 	}
 

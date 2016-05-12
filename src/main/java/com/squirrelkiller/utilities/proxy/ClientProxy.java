@@ -14,7 +14,7 @@ public class ClientProxy implements IProxy {
 
 	@Override
 	public void preInit() {
-
+		ModModelManager.INSTANCE.registerAllModels();
 	}
 
 	@Override

@@ -26,7 +26,7 @@ public class CommonProxy implements IProxy{
 
 	@Override
 	public void init() {
-		ModModelManager.INSTANCE.registerAllModels();
+		
 	}
 
 	@Override
