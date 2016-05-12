@@ -18,7 +18,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 public class ModRecipes {
 	
 	public static void ironNuggetRecipe() {
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.ironNugget), 9, "ingotIron"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.ironNugget, 9), "ingotIron"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.iron_ingot), "III", "III", "III", 'I', "nuggetIron"));
 	}
 	

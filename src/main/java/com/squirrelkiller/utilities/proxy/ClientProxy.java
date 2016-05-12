@@ -10,7 +10,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy implements IProxy {
 
-	private final Minecraft minecraft = Minecraft.getMinecraft();
+	//private final Minecraft minecraft = Minecraft.getMinecraft();
 
 	@Override
 	public void preInit() {
