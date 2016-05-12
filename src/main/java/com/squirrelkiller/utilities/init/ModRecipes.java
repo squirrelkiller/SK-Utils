@@ -3,7 +3,7 @@ package com.squirrelkiller.utilities.init;
 import java.util.Iterator;
 import java.util.List;
 
-import com.squirrelkiller.utilities.proxy.CommonProxy;
+import com.squirrelkiller.utilities.SKUtilities;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
@@ -18,7 +18,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 public class ModRecipes {
 	
 	public static void ironNuggetRecipe() {
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.items.get("Iron_Nugget"), 9), "ingotIron"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.ironNugget), 9, "ingotIron"));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.iron_ingot), "III", "III", "III", 'I', "nuggetIron"));
 	}
 	
@@ -33,9 +33,9 @@ public class ModRecipes {
 				remover.remove();
 		}
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.items.get("Fishing_Hook")), " I", "II", 'I', "nuggetIron"));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.items.get("Fishing_Rod_Reel")), "ingotIron", "stickWood", "string", "slimeball"));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.fishing_rod), ModItems.items.get("Fishing_Rod_Reel"), ModItems.items.get("Fishing_Hook"), "stickWood", "string"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.fishingHook), " I", "II", 'I', "nuggetIron"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.fishingRodReel), "ingotIron", "stickWood", "string", "slimeball"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.fishing_rod), ModItems.fishingRodReel, ModItems.fishingHook, "stickWood", "string"));
 		
 	}
 
@@ -63,31 +63,31 @@ public class ModRecipes {
 	}
 	
 	public static void addRecipes() {
-		if (CommonProxy.slimeRecipe) {
+		if (SKUtilities.slimeRecipe) {
 			slimeRecipe();
 		}
 		
-		if (CommonProxy.alternateBedRecipe) {
+		if (SKUtilities.alternateBedRecipe) {
 			alternateBedRecipe();
 		}
 		
-		if (CommonProxy.elytraRecipe) {
+		if (SKUtilities.elytraRecipe) {
 			elytraRecipe();
 		}
 		
-		if (CommonProxy.gravelToFlint){
+		if (SKUtilities.gravelToFlint){
 			gravelToFlint();
 		}
 		
-		if (CommonProxy.burningWoodSwordRecipe) {
+		if (SKUtilities.burningWoodSwordRecipe) {
 			burningWoodSwordRecipe();
 		}
 		
-		if (CommonProxy.ironNugget) {
+		if (SKUtilities.ironNugget) {
 			ironNuggetRecipe();
 		}
 		
-		if (CommonProxy.harderFishingRod) {
+		if (SKUtilities.harderFishingRod) {
 			fishingRecipeReplacer();
 		}
 	}

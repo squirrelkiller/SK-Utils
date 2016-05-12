@@ -1,15 +1,40 @@
 package com.squirrelkiller.utilities.proxy;
 
-import com.squirrelkiller.utilities.init.ModItems;
+import com.squirrelkiller.utilities.client.model.ModModelManager;
 
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
-public class ClientProxy extends CommonProxy{
-	
+public class ClientProxy implements IProxy {
+
+	private final Minecraft minecraft = Minecraft.getMinecraft();
+
 	@Override
-	public void preInit(FMLPreInitializationEvent e) {
-	    super.preInit(e); //ModItems is just the name of my class that contains the item registers etc...
-	    ModItems.initClient(); //The Method at the top
-	    
+	public void preInit() {
+
+	}
+
+	@Override
+	public void init() {
+
+	}
+
+	@Override
+	public void postInit() {
+
+	}
+
+	@Override
+	public void doClientRightClick() {
+		// Press the Use Item keybinding
+		KeyBinding.onTick(minecraft.gameSettings.keyBindUseItem.getKeyCode());
+	}
+
+	@Override
+	public EntityPlayer getClientPlayer() {
+		return minecraft.thePlayer;
 	}
 }

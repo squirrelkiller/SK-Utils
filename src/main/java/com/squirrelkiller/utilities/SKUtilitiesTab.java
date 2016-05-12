@@ -1,6 +1,7 @@
 package com.squirrelkiller.utilities;
 
 import com.squirrelkiller.utilities.init.ModItems;
+import com.squirrelkiller.utilities.item.Item_Mod_Icon;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ public class SKUtilitiesTab extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		// TODO Auto-generated method stub
-		return ModItems.items.get("Mod_Icon");
+		return ModItems.modIcon;
 	}
 
 }

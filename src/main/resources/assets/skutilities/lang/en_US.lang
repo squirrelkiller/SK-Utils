@@ -1,7 +1,5 @@
-item.Ant.name=Ant
-item.Cooked_Ant.name=Cooked Ant
-item.Fishing_Hook.name=Fishing Hook
-item.Fishing_Rod_Reel.name=Fishing Rod Reel
-item.Iron_Nugget.name=Iron Nugget
+item.skutilities:fishingHook.name=Fishing Hook
+item.skutilities:fishingRodReel.name=Fishing Rod Reel
+item.skutilities:ironNugget.name=Iron Nugget
 
 itemGroup.tabSKUtilities=SK Utilities
