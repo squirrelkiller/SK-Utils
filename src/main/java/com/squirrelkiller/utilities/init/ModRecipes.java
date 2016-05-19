@@ -19,7 +19,7 @@ public class ModRecipes {
 	
 	public static void ironNuggetRecipe() {
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.ironNugget, 9), "ingotIron"));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.iron_ingot), "III", "III", "III", 'I', "nuggetIron"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.IRON_INGOT), "III", "III", "III", 'I', "nuggetIron"));
 	}
 	
 	public static void fishingRecipeReplacer() {
@@ -29,37 +29,37 @@ public class ModRecipes {
 		
 		while(remover.hasNext()) {
 			ItemStack itemstack = remover.next().getRecipeOutput();
-			if(itemstack != null && itemstack.getItem() == Items.fishing_rod)
+			if(itemstack != null && itemstack.getItem() == Items.FISHING_ROD)
 				remover.remove();
 		}
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.fishingHook), " I", "II", 'I', "nuggetIron"));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.fishingRodReel), "ingotIron", "stickWood", "string", "slimeball"));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.fishing_rod), ModItems.fishingRodReel, ModItems.fishingHook, "stickWood", "string"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.FISHING_ROD), ModItems.fishingRodReel, ModItems.fishingHook, "stickWood", "string"));
 		
 	}
 
 	public static void slimeRecipe(){
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.slime_ball), Items.clay_ball, new ItemStack(Items.dye, 1, 15), Items.rotten_flesh);
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.SLIME_BALL), Items.CLAY_BALL, new ItemStack(Items.DYE, 1, 15), Items.ROTTEN_FLESH);
 	}
 	
 	public static void alternateBedRecipe(){
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.bed),"WW","WL",'W', Blocks.wool,'L', "logWood"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.BED),"WW","WL",'W', Blocks.WOOL,'L', "logWood"));
 	}
 
 	public static void elytraRecipe(){
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.elytra),"LTL","FCF","FEF",'F', "feather",'L', "leather",'T', Items.chorus_fruit,'C', Items.diamond_chestplate,'E', "blockEmerald"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ELYTRA),"LTL","FCF","FEF",'F', "feather",'L', "leather",'T', Items.CHORUS_FRUIT,'C', Items.DIAMOND_CHESTPLATE,'E', "blockEmerald"));
 
 	}
 	
 	public static void gravelToFlint(){
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.flint),"gravel"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.FLINT),"gravel"));
 	}
 	
 	public static void burningWoodSwordRecipe(){
-		ItemStack burningSword = new ItemStack(Items.wooden_sword);
+		ItemStack burningSword = new ItemStack(Items.WOODEN_SWORD);
 		burningSword.addEnchantment(Enchantment.getEnchantmentByID(20), 1);
-		GameRegistry.addRecipe(new ShapelessOreRecipe(burningSword, Items.wooden_sword, "torch"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(burningSword, Items.WOODEN_SWORD, "torch"));
 	}
 	
 	public static void addRecipes() {

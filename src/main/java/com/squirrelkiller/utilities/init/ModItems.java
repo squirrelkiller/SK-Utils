@@ -3,6 +3,7 @@ package com.squirrelkiller.utilities.init;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.squirrelkiller.utilities.SKUtilities;
 import com.squirrelkiller.utilities.item.Item_Fishing_Hook;
 import com.squirrelkiller.utilities.item.Item_Fishing_Rod_Reel;
 import com.squirrelkiller.utilities.item.Item_Iron_Nugget;
@@ -26,10 +27,12 @@ public class ModItems {
     	modIcon = registerItem(new Item_Mod_Icon());
     	fishingRodReel = registerItem(new Item_Fishing_Rod_Reel());
     	fishingHook = registerItem(new Item_Fishing_Hook());
-    	ironNugget = registerItem(new Item_Iron_Nugget());
-    	OreDictionary.registerOre("nuggetIron", new ItemStack(ironNugget));
-	}
- 
+    	if (SKUtilities.ironNugget) {
+    		ironNugget = registerItem(new Item_Iron_Nugget());
+        	OreDictionary.registerOre("nuggetIron", new ItemStack(ironNugget));
+		}
+    }
+
     /**
 	 * Register an Item
 	 *
